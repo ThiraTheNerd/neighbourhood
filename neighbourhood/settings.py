@@ -25,22 +25,15 @@ cloudinary.config(
   api_key = config('API_KEY'),
   api_secret = config('API_SECRET')
 )
-cloudinary.config(
-    cloud_name='playboard',
-    api_key=742327432827324,
-    api_secret='TZ48ji3v1taWruQscfUgVpl06C0'
-)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ee-45)+0n3pnr^0l7l-u2pf34-0wnl^n4v6kgs(#2l(xy8ohq*'
+MODE=config("MODE", default="dev")
+SECRET_KEY = config('SECRET_KEY')
 sys.modules["fontawesome_free"] = __import__("fontawesome-free")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 # Application definition
 
@@ -93,18 +86,30 @@ WSGI_APPLICATION = 'neighbourhood.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'neighbourhood',
-        'HOST': 'localhost',
-        'PORT': '',                    
-        'USER': 'thirathenerd',
-        'PASSWORD': 'admin2021',
-    }
-}
+if config('MODE')=="dev":
+   DATABASES = {
+       'default': {
+           'ENGINE': 'django.db.backends.postgresql_psycopg2',
+           'NAME': config('DB_NAME'),
+           'USER': config('DB_USER'),
+           'PASSWORD': config('DB_PASSWORD'),
+           'HOST': config('DB_HOST'),
+           'PORT': '',
+       }
+       
+   }
+# production
+else:
+   DATABASES = {
+       'default': dj_database_url.config(
+           default=config('DATABASE_URL')
+       )
+   }
 
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
