@@ -40,7 +40,7 @@ class Profile(models.Model):
     full_name = models.CharField(blank=True, max_length=120)
     profession = models.CharField(blank=True, max_length=120)
     email_address = models.EmailField(null=True, blank=True)
-    website = URLOrRelativeURLField(null=True,blank=True)
+    website_url= URLOrRelativeURLField(null=True,blank=True)
     facebook =URLOrRelativeURLField(null=True,blank=True)
     instagram = URLOrRelativeURLField(null=True,blank=True)
     twitter = URLOrRelativeURLField(null=True,blank=True)
@@ -48,19 +48,19 @@ class Profile(models.Model):
     location = models.ForeignKey(Hood, on_delete=models.SET_NULL, null=True, related_name='members', blank=True)
 
     def __str__(self):
-        return self.user
+        return str(self.user)
 
 
 class Business(models.Model):
-    bs_name= models.CharField(max_length=100, null=False, blank=False)
+    bs_name= models.CharField(max_length=100)
     description = HTMLField(blank=True)
-    bs_logo = CloudinaryField(blank =False, null = False)
-    owner = models.ForeignKey(Profile, null=False, blank=False, on_delete=models.CASCADE, related_name='owner')
+    bs_logo = CloudinaryField('image')
+    owner = models.ForeignKey(Profile,on_delete=models.CASCADE, related_name='business')
     hood = models.ForeignKey(Hood,on_delete=models.CASCADE, related_name='business')
-    bs_email = models.EmailField(null=False, blank=True)
-    facebook =URLOrRelativeURLField(null=True,blank=True)
-    instagram = URLOrRelativeURLField(null=True,blank=True)
-    twitter = URLOrRelativeURLField(null=True,blank=True)
+    bs_email = models.EmailField(max_length=50)
+    facebook =URLOrRelativeURLField(max_length=100, default='https://web.facebook.com/')
+    instagram = URLOrRelativeURLField(max_length=100, default='https://www.instagram.com/' )
+    twitter = URLOrRelativeURLField(max_length=100, default='https://twitter.com/')
 
     def __str__(self):
         return self.bs_name
@@ -90,3 +90,13 @@ class Post(models.Model):
 
     def delete_post(self):
         self.delete()
+
+class BlogPost(models.Model):
+    title = models.CharField(max_length=50)
+    blog_post = models.TextField()
+    user = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="post_editor") 
+    neighborhood = models.ForeignKey('Hood',on_delete=models.CASCADE,related_name='post')
+    posted = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.title}'
