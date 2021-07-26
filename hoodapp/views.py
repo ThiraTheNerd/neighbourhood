@@ -55,6 +55,17 @@ def new_hood(request):
     else:
         form = HoodForm()
     return render(request, 'create_hood.html', {'form': form})
+def view_hood(request, hood_id):
+    hood = Hood.objects.get(id =hood_id)
+    business = Business.objects.filter(hood = hood)
+    posts = Post.objects.filter(hood = hood)
+    posts = posts[::-1]
+    ctx = {
+        'hood': hood,
+        'business': business,
+        'posts': posts
+    }
+    return render(request, 'view_hood.html', ctx)
 def add_business(request, hood_id):
     if request.method == 'POST':
         hood = Hood.objects.get(id =hood_id)
