@@ -74,7 +74,7 @@ def add_business(request, hood_id):
             bs_form = form.save(commit=False)
             bs_form.hood = hood
             bs_form.owner = request.user.profile
-            bs_form.save()
+            bs_form.create_business()
             return redirect('view-hood', hood.id)
     else:
         form = BusinessForm()

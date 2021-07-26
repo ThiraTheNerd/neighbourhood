@@ -63,7 +63,7 @@ class Business(models.Model):
     twitter = URLOrRelativeURLField(null=True,blank=True)
 
     def __str__(self):
-        return str(self.bs_name)
+        return self.bs_name
 
     def create_business(self):
         self.save()
