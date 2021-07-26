@@ -5,7 +5,7 @@ This is an app that helps you stay in the loop on current news in your neighbour
 To view the site, click [here](https://thehood254.herokuapp.com/)
 
 ## Admin Dashboard credentials
-username : u45659
+username : u45142
 password :admin2020
 ## Screenshots 
 ###### Home page
