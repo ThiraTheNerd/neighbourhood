@@ -11,15 +11,14 @@
     </tr>
   </thead>
   <tbody>
-  {% for member in members%}
+  {% for resident in residents%}
     <tr>
       <th scope="row">*</th>
-      <td>{{ member.user.username }}</td>
-      <td>{{ member.location}}</td>
+      <td>{{ resident.user.username }}</td>
+      <td>{{ resident.location}}</td>
     </tr>
   {% endfor %}
   </tbody>
 </table>
 
-{% endblock %}
 {% endblock %}

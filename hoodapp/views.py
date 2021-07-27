@@ -1,7 +1,7 @@
 from django.http.response import Http404
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
-from .models import Post, Profile, Hood, Business
+from .models import News, Profile, Hood, Business
 from django.contrib.auth.models import User
 from .forms import EditProfileForm, HoodForm, BusinessForm, NewsForm
 from django.core.exceptions import ObjectDoesNotExist
@@ -23,7 +23,7 @@ def profile(request , username):
     except ObjectDoesNotExist:
         raise Http404()
     businesses = Business.objects.filter(owner = profile)
-    posts = Post.objects.filter(user = profile)
+    posts = News.objects.filter(user = profile)
     ctx = {
         "user": user,
         "profile" : profile,
@@ -58,12 +58,12 @@ def new_hood(request):
 def view_hood(request, hood_id):
     hood = Hood.objects.get(id =hood_id)
     business = Business.objects.filter(hood = hood)
-    posts = Post.objects.filter(hood = hood)
-    posts = posts[::-1]
+    news = News.objects.filter(hood = hood)
+    news = news[::-1]
     ctx = {
         'hood': hood,
         'business': business,
-        'posts': posts
+        'news': news
     }
     return render(request, 'view_hood.html', ctx)
 def add_business(request, hood_id):
