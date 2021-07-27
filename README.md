@@ -72,4 +72,4 @@ Open the application on your browser `127.0.0.1:8000`.
 If you have any question or contributions, please email me at [thiragithinji@gmail.com] 
 
 ## License 
-* Copyright (c) 2019 **ThiraTheNerd**
+* Copyright (c) 2021 **ThiraTheNerd**
