@@ -119,7 +119,7 @@ def hood_members(request, hood_id):
     ctx ={
         'residents':residents
     }
-    return render(request, 'residents.html', ctx)
+    return render(request, 'hood_residents.html', ctx)
 
 def new_post(request, hood_id):
     hood = Hood.objects.get(id =hood_id)
