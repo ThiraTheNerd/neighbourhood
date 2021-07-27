@@ -41,7 +41,7 @@
         <a href="{% url 'add-biz' hood.id %}" class="btn btn-sm btn-outline-info mb-4 mr-4">New Business</a>
         <a class="btn btn-sm btn-outline-info mb-4" href="">New Notice</a>
         {% if hood.admin == user.profile %}
-        <a href="" class="btn btn-sm btn-outline-info mb-4 ml-4">All Members</a>
+        <a href="{% url 'hood_members' hood.id %}" class="btn btn-sm btn-outline-info mb-4 ml-4">All Members</a>
         {% endif %}
         <form class="form-inline" method="get" action="{% url 'search' %}">
           {% csrf_token %}

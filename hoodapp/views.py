@@ -3,7 +3,7 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from .models import Post, Profile, Hood, Business
 from django.contrib.auth.models import User
-from .forms import EditProfileForm, HoodForm, BusinessForm
+from .forms import EditProfileForm, HoodForm, BusinessForm, NewsForm
 from django.core.exceptions import ObjectDoesNotExist
 # Create your views here.
 
@@ -112,3 +112,25 @@ def search_business(request):
     else:
         message = "You haven't searched for any image category"
     return render(request, "results.html")
+
+def hood_members(request, hood_id):
+    hood = Hood.objects.get(id =hood_id)
+    residents = Profile.objects.filter(location = hood)
+    ctx ={
+        'residents':residents
+    }
+    return render(request, 'residents.html', ctx)
+
+def new_post(request, hood_id):
+    hood = Hood.objects.get(id =hood_id)
+    if request.method == 'POST':
+        form = NewsForm(request.POST)
+        if form.is_valid():
+            news = form.save(commit=False)
+            news.hood = hood
+            news.user = request.user.profile
+            news.save()
+            return redirect('view-hood', hood.id)
+    else:
+        form = NewsForm()
+    return render(request, 'news.html', {'form': form})
