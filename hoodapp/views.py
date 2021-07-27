@@ -100,8 +100,9 @@ def leave_hood(request, id):
 
 def search_business(request):
     if request.method == 'GET':
-        name = request.GET.get("business")
-        results = Business.objects.filter(name__icontains=name).all()
+        name = request.GET.get("title")
+
+        results = Business.objects.filter(bs_name__icontains=name).all()
         print(results)
         message = f'name'
         ctx = {
