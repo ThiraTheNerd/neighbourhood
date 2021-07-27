@@ -90,13 +90,3 @@ class News(models.Model):
 
     def delete_post(self):
         self.delete()
-
-class BlogPost(models.Model):
-    title = models.CharField(max_length=50)
-    blog_post = models.TextField()
-    user = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="post_editor") 
-    neighborhood = models.ForeignKey('Hood',on_delete=models.CASCADE,related_name='post')
-    posted = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f'{self.title}'
