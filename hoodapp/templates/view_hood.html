@@ -39,7 +39,7 @@
     <div class="row">
       <div class="col-md-12">
         <a href="{% url 'add-biz' hood.id %}" class="btn btn-sm btn-outline-info mb-4 mr-4">New Business</a>
-        <a class="btn btn-sm btn-outline-info mb-4" href="{% url 'post' %}">New Notice</a>
+        <a class="btn btn-sm btn-outline-info mb-4" href="{% url 'post' hood.id %}">New Notice</a>
         {% if hood.admin == user.profile %}
         <a href="{% url 'hood_members' hood.id %}" class="btn btn-sm btn-outline-info mb-4 ml-4">All Members</a>
         {% endif %}
@@ -50,7 +50,7 @@
               aria-label="Search">
           </div>
         </form>
-        <h5 class="D-block mx-auto tt">Businesses</h5>
+        <h2 class="D-block mx-auto tt">Businesses</h2>
         <hr>
         <div class="row">
           {% for busi in business %}
@@ -73,7 +73,7 @@
           </div>
           {% endfor %}
         </div>
-        <h5 class="D-block mx-auto tt">Posts</h5>
+        <h2 class="D-block mx-auto tt">Posts</h2>
         <div class="row">
           {% for new in news %}
           <div class="col-md-4">
