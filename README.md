@@ -1,16 +1,81 @@
-# Neighbourhood  Description
-This is an app that helps you stay in the loop on current news in your neighbourhood. Through the app, you can also view businesses near you and be able to connect with those business owners.
+# Community Management System
+#### A platform to help you stay informed, connected, and empowered in your community
 
-##  Live Link 
-To view the site, click [here](https://thehood254.herokuapp.com/)
+##  Overview
+Stay connected to your community with our innovative web portal. Get the latest news and updates from your neighborhood, discover local businesses, and connect with their owners. Our platform simplifies various manual processes, making it easier for you to stay informed and engaged with your community.
 
-## Admin Dashboard credentials
-username : u45142
-password :admin2020
-## Screenshots 
-###### Home page
-<img src= "https://user-images.githubusercontent.com/51013354/127110257-d43937ec-758d-4f3b-a805-c90df296b45a.png">
+## Core Features
 
+![admin](https://img.shields.io/badge/admin-login-teal.svg?style=flat-square) 
+![search](https://img.shields.io/badge/seacrh-books-yellowgreen.svg?style=flat-square)
+![issue](https://img.shields.io/badge/issue-books-ff69b4.svg?style=flat-square)
+![member](https://img.shields.io/badge/add-member-dodgerblue.svg?style=flat-square) 
+![add](https://img.shields.io/badge/add-books-orange.svg?style=flat-square) 
+
+- **Searching** of books
+- **Issuing** and **returning** books
+- Check fines(if any)
+- Librarian can read information about any member
+- Librarian can track the books issued by a particular student
+- Librarian can **add/remove any member**(student).
+- Librarian can **add/delete books**
+- Librarian can update the availability status of the books
+
+## Additional Features
+
+**Admin Dashboard** deal with the following : 
+
+- Displaying all members records.
+
+- Displaying all books records.
+
+- Update Book Records.
+
+- Delete Book Records
+
+- Add Book Records
+
+- Add Member/Student Records
+
+- Delete Member/Student Records
+
+- Update Member/Student Records.
+
+## Modules
+
+- Admin login
+- Search Books
+- Add and Update Books
+- Add and Remove Members
+- Issue Books
+
+## Technology Stack Used
+
+![HTML](https://img.shields.io/badge/frontend-html-orange.svg?logo=html5&style=flat-square) 
+![CSS](https://img.shields.io/badge/frontend-css-yellowgreen.svg?logo=css3&style=flat-square)
+![JavaScript](https://img.shields.io/badge/frontend-js-ff69b4.svg?logo=javascript&style=flat-square)
+![PHP](https://img.shields.io/badge/backend-php-blue.svg?logo=php&style=flat-square) 
+![MYSQL](https://img.shields.io/badge/database-mysql-lightgray.svg?logo=mysql&logoColor=white&style=flat-square) 
+
+- Front End - **HTML**, **CSS**, **JavaScript**
+- Back End - **PHP**
+- Database - **MySql**
+
+## Requirements
+
+[![PHP](https://img.shields.io/static/v1.svg?label=Source%20Code&message=php&logo=php&style=social)](https://vinitshahdeo.github.io/Library-Management-System/)
+
+The source code of this project is written in **PHP**. So, you'll require **WAMP/XAMPP/MAMP** to run this project.
+
+## Installing 
+
+[![wamp](https://img.shields.io/badge/wamp-server-red.svg?style=flat-square)](http://www.wampserver.com/en/) [![xampp](https://img.shields.io/badge/xampp-server-blue.svg?style=flat-square)](https://www.apachefriends.org/download.html) [![mamp](https://img.shields.io/badge/mamp-server-lightgrey.svg?style=flat-square)](https://www.mamp.info/en/)
+
+- Download [WAMP](http://www.wampserver.com/en/)
+- Download [XAMPP](https://www.apachefriends.org/download.html)
+- Download [MAMP](https://www.mamp.info/en/)
+
+## How to run?
 ## User Story  
   
 * Sign in with the application to start using.
