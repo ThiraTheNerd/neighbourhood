@@ -12,70 +12,41 @@ Stay connected to your community with our innovative web portal. Get the latest 
 ![member](https://img.shields.io/badge/add-member-dodgerblue.svg?style=flat-square) 
 ![add](https://img.shields.io/badge/add-books-orange.svg?style=flat-square) 
 
-- **Searching** of books
-- **Issuing** and **returning** books
-- Check fines(if any)
-- Librarian can read information about any member
-- Librarian can track the books issued by a particular student
-- Librarian can **add/remove any member**(student).
-- Librarian can **add/delete books**
-- Librarian can update the availability status of the books
+- **Authentication** and Profile
+- **Adding** and **Viewing** Neighborhood Features
+- Business Directory
+- Community Resources
+- Security and Privacy
+- Community Engagement
+
 
 ## Additional Features
 
 **Admin Dashboard** deal with the following : 
 
-- Displaying all members records.
+- Mobile-First Interface.
 
-- Displaying all books records.
+- Reporting & Analytics.
 
-- Update Book Records.
+- Web Push Notification.
 
-- Delete Book Records
+- Live Chat
 
-- Add Book Records
+- Search Engine Optimization
 
-- Add Member/Student Records
+- Social Integration
 
-- Delete Member/Student Records
 
-- Update Member/Student Records.
 
 ## Modules
 
-- Admin login
-- Search Books
-- Add and Update Books
-- Add and Remove Members
-- Issue Books
+- [User Module]()
+- [Neighborhood News Feed]([https://github.com/ThiraTheNerd/pizza-peddler](https://github.com/ThiraTheNerd/neighbourhood))
+- [Business](https://github.com/ThiraTheNerd/pizza-peddler)
+- [Community]()
+- [Messaging]()
+- [Learning]()
 
-## Technology Stack Used
-
-![HTML](https://img.shields.io/badge/frontend-html-orange.svg?logo=html5&style=flat-square) 
-![CSS](https://img.shields.io/badge/frontend-css-yellowgreen.svg?logo=css3&style=flat-square)
-![JavaScript](https://img.shields.io/badge/frontend-js-ff69b4.svg?logo=javascript&style=flat-square)
-![PHP](https://img.shields.io/badge/backend-php-blue.svg?logo=php&style=flat-square) 
-![MYSQL](https://img.shields.io/badge/database-mysql-lightgray.svg?logo=mysql&logoColor=white&style=flat-square) 
-
-- Front End - **HTML**, **CSS**, **JavaScript**
-- Back End - **PHP**
-- Database - **MySql**
-
-## Requirements
-
-[![PHP](https://img.shields.io/static/v1.svg?label=Source%20Code&message=php&logo=php&style=social)](https://vinitshahdeo.github.io/Library-Management-System/)
-
-The source code of this project is written in **PHP**. So, you'll require **WAMP/XAMPP/MAMP** to run this project.
-
-## Installing 
-
-[![wamp](https://img.shields.io/badge/wamp-server-red.svg?style=flat-square)](http://www.wampserver.com/en/) [![xampp](https://img.shields.io/badge/xampp-server-blue.svg?style=flat-square)](https://www.apachefriends.org/download.html) [![mamp](https://img.shields.io/badge/mamp-server-lightgrey.svg?style=flat-square)](https://www.mamp.info/en/)
-
-- Download [WAMP](http://www.wampserver.com/en/)
-- Download [XAMPP](https://www.apachefriends.org/download.html)
-- Download [MAMP](https://www.mamp.info/en/)
-
-## How to run?
 ## User Story  
   
 * Sign in with the application to start using.
@@ -85,6 +56,24 @@ The source code of this project is written in **PHP**. So, you'll require **WAMP
 * Create Posts that will be visible to everyone in my neighborhood.
 * Change My neighborhood when I decide to move out.
 * Only view details of a single neighborhood.
+  
+## Technology Stack Used
+
+![HTML](https://img.shields.io/badge/frontend-html-orange.svg?logo=html5&style=flat-square) 
+![CSS](https://img.shields.io/badge/frontend-css-yellowgreen.svg?logo=css3&style=flat-square)
+![JavaScript](https://img.shields.io/badge/frontend-js-ff69b4.svg?logo=javascript&style=flat-square)
+![Python](https://img.shields.io/badge/backend-php-blue.svg?logo=python&style=flat-square) 
+![MYSQL](https://img.shields.io/badge/database-mysql-lightgray.svg?logo=mysql&logoColor=white&style=flat-square) 
+
+- Front End - **HTML**, **CSS**, **JavaScript**
+- Back End - **Python**, **Django Rest**, **MERN**
+- Database - **MySql**, **NoSQL**
+
+## Requirements
+
+The source code of this project is written in **Python**
+
+## How to run?
 
 ## Setup and Installation  
 To get the project follow these steps:
