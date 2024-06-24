@@ -41,7 +41,7 @@ Stay connected to your community with our innovative web portal. Get the latest 
 ## Modules
 
 - [User Module]()
-- [Neighborhood News Feed]([https://github.com/ThiraTheNerd/pizza-peddler](https://github.com/ThiraTheNerd/neighbourhood))
+- [Neighborhood News Feed](https://github.com/ThiraTheNerd/neighbourhood)
 - [Business](https://github.com/ThiraTheNerd/pizza-peddler)
 - [Community]()
 - [Messaging]()
@@ -62,7 +62,6 @@ Stay connected to your community with our innovative web portal. Get the latest 
 ![HTML](https://img.shields.io/badge/frontend-html-orange.svg?logo=html5&style=flat-square) 
 ![CSS](https://img.shields.io/badge/frontend-css-yellowgreen.svg?logo=css3&style=flat-square)
 ![JavaScript](https://img.shields.io/badge/frontend-js-ff69b4.svg?logo=javascript&style=flat-square)
-![Python](https://img.shields.io/badge/backend-php-blue.svg?logo=python&style=flat-square) 
 ![MYSQL](https://img.shields.io/badge/database-mysql-lightgray.svg?logo=mysql&logoColor=white&style=flat-square) 
 
 - Front End - **HTML**, **CSS**, **JavaScript**
